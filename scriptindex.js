@@ -44,4 +44,14 @@ function reset ()
     document.getElementById('b4').value = '';
     document.getElementById('t4').value = '';
 }
+function ttc()
+{
+    var total = 0;
+    var t4Value = Number(document.getElementById('t4').value) || 0;
+    var a4Value = Number(document.getElementById('a4').value) || 0;
+    var b4Value = Number(document.getElementById('b4').value) || 0;
 
+    total = t4Value + a4Value + b4Value;
+    
+    document.getElementById('fin').value = total.toFixed(2);
+}
