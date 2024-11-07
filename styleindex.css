@@ -1,0 +1,115 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+#Facture {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les sections */
+#Facture div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Style pour les labels et inputs */
+#Facture label {
+    font-weight: bold;
+    color: #333;
+}
+
+#Facture input[type="text"],
+#Facture input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+#Facture input[type="text"]:focus,
+#Facture input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Style pour les résultats (désactivés) */
+#Facture input[disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+/* Style pour les boutons */
+#Facture button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Bouton pour soumettre */
+#Facture button:nth-child(2) {
+    background-color: #007bff;
+}
+
+#Facture button:nth-child(2):hover {
+    background-color: #0056b3;
+}
+
+/* Bouton pour réinitialiser */
+#Facture button:first-child {
+    background-color: #dc3545;
+}
+
+#Facture button:first-child:hover {
+    background-color: #c82333;
+}
+
+/* Affichage des sections */
+.article, .Prix, .Quantité, .resultat {
+    grid-column: span 1;
+}
+
+.resultat label, .resultat input {
+    color: #28a745;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #Facture {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #Facture {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleindex.css">
+    <script src="scriptindex.js"></script>
+</head>
+<body>
+    <section id="Facture">
+        <div class="article">
+            <label for="t1">article</label>
+            <input type="text"  class="c1" name="t1" id="t1"  >
+            <label for="a1">article</label>
+            <input type="text"  class="c1" name="t1" id="a1"  >
+            <label for="b1">article</label>
+            <input type="text"  class="c1" name="t1" id="b1"  >
+            <input type="submit" name="r1" id="r1" value="reset" onclick="reset()">
+            
+        </div>
+        <div class="Prix">
+            <label for="t2">Prix</label>
+            <input type="text"  class="Prix" name="t2" id="t2" >
+            <label for="a2">Prix</label>
+            <input type="text"  class="Prix" name="t2" id="a2"  >
+            <label for="b2">Prix</label>
+            <input type="text"  class="Prix" name="t2" id="b2"  >
+            <input type="submit" name="r2" id="r2" value="soumettre" onclick="submit()">
+        </div>
+        <div class="Quantité">
+            <label for="t3">Quantité</label>
+            <input type="text"  class="Quantité" name="t3" id="t3" oninput="calcul()" >
+             <label for="a3">Quantité</label>
+            <input type="text"  class="Quantité" name="a3" id="a3" oninput="calcul()" >
+            <label for="b3">Quantité</label>
+            <input type="text"  class="Quantité" name="b3" id="b3" oninput="calcul()" >
+            
+
+        </div>
+        <div class="resultat">
+            <label for="t4">Resultat</label>
+            <input type="text"  class="resultat" name="t4" id="t4" oninput="calcul()" >
+            <label for="a4">Resultat</label>
+            <input type="text"  class="resultat" name="a4" id="a4" oninput="calcul()" >
+            <label for="b4">Resultat</label>
+            <input type="text"  class="resultat" name="b4" id="b4" oninput="calcul()" >
+        </div>
+        
+
+    </section>
+</body>
+</html>
